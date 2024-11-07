@@ -1,0 +1,104 @@
+@import url("./navbar-responsive.css");
+@import url("../dropDown/dropDown.css");
+/* START ROOT */
+:root {
+  --primary-font: "Zumme"; /* WEIGHTS: 300, 500, 600 */
+  --secondry-font: "Poppins"; /* WEIGHTS: 400, 500, 600 */
+  --kodeMono-font: "Kode Mono";
+  --font-family: var(--primary-font);
+  --fontStyle-Normal: normal;
+  --fontStyle-Italic: italic;
+  --navbar-Background: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(0, 0, 0, 0) 94.02%
+  );
+  --layout-background: linear-gradient(0deg, #000 0%, #000 100%);
+  --bullets-Background: rgba(0, 0, 0, 0.17);
+  --full-White: #ffffff;
+  --full-Black: #000000;
+  --devo-Emperor: #555555;
+  --devo-Gallery: #eeeeee;
+  --text-Seashell: #f1f1f1;
+  --gray-100: #f0f0f0;
+  --aother-Black: #0e0e0e;
+  --another-Gray: #c3c3c3;
+  --border-Color: #373737;
+  --text-Gray-Chateau: #a9aeb2;
+  --secondery-Color: #f6c42d;
+  --devo-Flamingo: #f6c42e;
+  --news-Letter: #ffb73d;
+}
+:root[lang="ar"] {
+  --primary-font: "Cairo";
+  --secondry-font: "Cairo";
+  --font-family: var(--primary-font);
+}
+/* END ROOT */
+
+/* START NAVBAR */
+nav {
+  width: 100%;
+  height: 11.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: var(--navbar-Background);
+}
+
+nav .logo {
+  display: block;
+  width: 12.6rem;
+  height: 3.5rem;
+}
+
+nav .nav__list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  & .list__wall {
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-Color);
+  }
+
+  & li {
+    margin: 0 4rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    & .nav__list--item {
+      color: var(--gray-100);
+      font-family: var(--secondry-font);
+      line-height: 2.5rem;
+      letter-spacing: -0.25px;
+      text-transform: capitalize;
+      transition: 0.3s;
+      &:hover {
+        color: var(--secondery-Color);
+      }
+    }
+  }
+}
+
+nav .nav__controls {
+  flex: 0.5;
+
+  & #switchLang {
+    padding: 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-Color);
+    background: var(--navbar-Background);
+    color: var(--devo-Flamingo);
+    font-size: 1.2rem;
+    font-family: var(--secondry-font);
+    overflow: hidden;
+    & option {
+      font-size: 1.2rem;
+      color: var(--full-White);
+      background: #0e0e0e;
+    }
+  }
+}
+/* END NAVBAR */

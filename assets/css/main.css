@@ -1,0 +1,82 @@
+/* START IMPORTING CSS FILES */
+@import url("./fonts.css");
+@import url("./base.css");
+@import url("../layout/header/header.css");
+@import url("../layout/navbar/navbar.css");
+@import url("../layout/home/homepage.css");
+@import url("../layout/footer/footer.css");
+@import url("../layout/breadCrumbs/breadcrumbs.css");
+/* END IMPORTING CSS FILES */
+:root {
+  /* FONTS - Default (English) */
+  --primary-font: "Zumme"; /* WEIGHTS: 300, 500, 600 */
+  --secondry-font: "Poppins"; /* WEIGHTS: 400, 500, 600 */
+  --kodeMono-font: "Kode Mono";
+  --font-family: var(--primary-font);
+
+  /* FONT STYLE */
+  --fontStyle-Normal: normal;
+  --fontStyle-Italic: italic;
+
+  /* COLOR PALLETE */
+  --navbar-Background: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(0, 0, 0, 0) 94.02%
+  );
+  --layout-background: linear-gradient(0deg, #000 0%, #000 100%);
+  --bullets-Background: rgba(0, 0, 0, 0.17);
+  --full-White: #ffffff;
+  --full-Black: #000000;
+  --devo-Emperor: #555555;
+  --devo-Gallery: #eeeeee;
+  --text-Seashell: #f1f1f1;
+  --gray-100: #f0f0f0;
+  --aother-Black: #0e0e0e;
+  --another-Gray: #c3c3c3;
+  --border-Color: #373737;
+  --text-Gray-Chateau: #a9aeb2;
+  --secondery-Color: #f6c42d;
+  --devo-Flamingo: #f6c42e;
+  --news-Letter: #ffb73d;
+}
+
+/* Arabic Font Settings */
+:root[lang="ar"] {
+  --primary-font: "Cairo"; /* Arabic font for primary and secondary */
+  --secondry-font: "Cairo";
+  --font-family: var(--primary-font);
+}
+
+/* END ROOT */
+.section {
+  transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+img {
+  transition: filter 0.5s;
+}
+
+.lazy-img {
+  filter: blur(20px);
+}
+
+.over__lay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #00000093;
+  z-index: -1;
+  transition: opacity 0.3s;
+}
+.over__lay.active {
+  z-index: 1;
+  opacity: 1;
+}

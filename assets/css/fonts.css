@@ -1,0 +1,44 @@
+/* START ZUUME FONT SOURCE */
+@font-face {
+  font-family: "Zumme";
+  src: url(../fonts/english/zuume/Zuume\ Medium.woff2) format("woff2"),
+    url(../fonts/english/zuume/Zuume\ Medium\ Italic.woff2),
+    url(../fonts/english/zuume/Zuume\ Medium.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* END ZUUME FONT SOURCE */
+
+/* START POPPINS FONT SOURCE */
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/english/poppins/Poppins-Medium.woff2) format("woff2"),
+    url(../fonts/english/poppins/Poppins-Medium.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* END POPPINS FONT SOURCE */
+
+/* START KODE MONE FONT SOURCE */
+@font-face {
+  font-family: "Kode Mono";
+  src: url(../fonts/english/kode\ mono/KodeMono-VariableFontwght.woff2)
+    format("woff2");
+  src: url(../fonts/english/kode\ mono/KodeMono-VariableFontwght.woff)
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* END KODE MONE FONT SOURCE */
+
+/* START CAIRO FONT SOURCE */
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/arabic/cairo/Cairo-VariableFontslntwght.woff2")
+    format("woff2");
+  src: url("../fonts/arabic/cairo/Cairo-VariableFontslntwght.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* END CAIRO FONT SOURCE */

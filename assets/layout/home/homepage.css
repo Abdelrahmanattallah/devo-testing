@@ -1,0 +1,274 @@
+@import url("./homepage-responsive.css");
+/* START ROOT */
+:root {
+  --primary-font: "Zumme"; /* WEIGHTS: 300, 500, 600 */
+  --secondry-font: "Poppins"; /* WEIGHTS: 400, 500, 600 */
+  --kodeMono-font: "Kode Mono";
+  --font-family: var(--primary-font);
+  --fontStyle-Normal: normal;
+  --fontStyle-Italic: italic;
+  --navbar-Background: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(0, 0, 0, 0) 94.02%
+  );
+  --layout-background: linear-gradient(0deg, #000 0%, #000 100%);
+  --bullets-Background: rgba(0, 0, 0, 0.17);
+  --full-White: #ffffff;
+  --full-Black: #000000;
+  --devo-Emperor: #555555;
+  --devo-Gallery: #eeeeee;
+  --text-Seashell: #f1f1f1;
+  --gray-100: #f0f0f0;
+  --aother-Black: #0e0e0e;
+  --another-Gray: #c3c3c3;
+  --border-Color: #373737;
+  --text-Gray-Chateau: #a9aeb2;
+  --secondery-Color: #f6c42d;
+  --devo-Flamingo: #f6c42e;
+  --news-Letter: #ffb73d;
+  /* SECTION BANNERS */
+  --span--banner-margin: 0;
+  --span--banner-textAlign: end;
+  /* SECTION BANNERS BANNER 1  */
+  --bannerOne-intro-align: start;
+}
+
+:root[lang="ar"] {
+  --primary-font: "Cairo";
+  --secondry-font: "Cairo";
+  --font-family: var(--primary-font);
+  --span--banner-margin: 2rem;
+  --span--banner-textAlign: start;
+  --bannerOne-intro-align: end;
+}
+/* END ROOT */
+/* START EXPLORE DEVO */
+.explore__devo {
+  width: 100%;
+  .devo__holder {
+    display: flex;
+    /* height: 100%; */
+    /* align-items: normal; */
+    gap: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  & .devo__holder.second {
+    margin-bottom: 0;
+  }
+}
+
+.devo__holder .devo__holder--bigger {
+  flex: 2;
+}
+.devo__holder .devo__holder--smaller {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.devo__holder,
+.devo__holder.second {
+  & a {
+    position: relative;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    & img {
+      border-radius: inherit;
+      opacity: 0.8;
+      transition: 0.5s;
+    }
+
+    & .devo__img__holder {
+      overflow: hidden;
+      background: var(
+        --devo-Black,
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 1.42%,
+          rgba(0, 0, 0, 0.63) 120.17%
+        )
+      );
+    }
+  }
+
+  & h3 {
+    position: absolute;
+    width: 100%;
+    margin-inline-start: 1.6rem;
+    color: var(--text-Seashell);
+    z-index: 1;
+    font-family: var(--primary-font);
+    font-style: normal;
+    text-transform: uppercase;
+    bottom: 3.2rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* START BANNERS */
+.banners {
+  width: 100%;
+  & .banner__one {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    display: flex;
+    justify-content: var(--bannerOne-intro-align);
+    & .banner__image--holder {
+      width: 100%;
+      border-radius: var(--radius--imgs);
+      & img {
+        border-radius: inherit;
+      }
+    }
+    & .banner__one--intro {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      /* left: 3.3rem; */
+      max-width: 42.7rem;
+      & .banner__one__intro--holder {
+        text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        font-style: italic;
+        font-family: var(--primary-font);
+        line-height: 6.8rem;
+        width: fit-content;
+        max-width: 427px;
+        font-size: 7rem;
+
+        & h3 {
+          font-size: inherit;
+          font-weight: 300;
+          color: var(--full-White);
+          /* background-color: red; */
+        }
+        & .banner__special {
+          display: block;
+          text-align: var(--span--banner-textAlign);
+          font-style: italic;
+          font-weight: 600;
+          color: var(--devo-Flamingo);
+          margin-block: var(--span--banner-margin);
+        }
+      }
+      & p {
+        color: var(--full-White);
+        font-family: var(--secondry-font);
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.3rem;
+        letter-spacing: -0.3px;
+        margin-top: calc(var(--span--banner-margin) + 1rem);
+      }
+    }
+  }
+  & .banner__two {
+    height: 555px;
+    margin: 3.8rem 0 0;
+    & .banner__image--holder {
+      border-radius: var(--radius--imgs);
+
+      & img {
+        border-radius: inherit;
+      }
+    }
+  }
+}
+/* START WHERE TO BUY */
+.where__to__buy {
+  width: 100%;
+  & img {
+    opacity: 0.8;
+  }
+}
+/* END WHERE TO BUY */
+/* START BLOG */
+.blog {
+  width: 100%;
+  & .blog__holder {
+    position: relative;
+    width: 100%;
+    font-family: var(--arabic-font);
+    height: 45.5rem;
+
+    & .blog__img--holder {
+      height: 100%;
+      position: relative;
+      & img {
+        border-radius: inherit;
+      }
+      &::after {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.8) 100%
+          ),
+          linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #2b2b2b 100%);
+      }
+    }
+  }
+
+  & .blog__text {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    right: 2.5rem;
+    transform: translateY(-50%);
+    & h3 {
+      color: var(--full-White);
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 0px;
+      margin-bottom: 1.3rem;
+    }
+    & p {
+      max-width: 36.2rem;
+      margin: 3.3rem 0 1.3rem;
+      color: var(--full-White);
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 2.3rem;
+      /* letter-spacing: -0.3px; */
+    }
+    & a {
+      color: var(--full-Black);
+      display: flex;
+      width: 161px;
+      height: 43px;
+      padding: 12px 19px 12px 16px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 5.7rem;
+    }
+  }
+}
+
+/* !TRANSLATED PART */
+/* START HEADER TRANSLATED */
+/* .space__intro.translated {
+  margin-top: 2rem;
+} */
+/* START NAVBAR TRANSLATED */
+/* START DROPDOWNS TRANSLATED */
+/* START EXPLORE DEVO TRANSLATED */
+
+/* START BANNERS TRANSLATED */
+/* START WHERE TO BUY TRANSLATED */
+/* START BLOG TRANSLATED */
+/* START FOOTER TRANSLATED */

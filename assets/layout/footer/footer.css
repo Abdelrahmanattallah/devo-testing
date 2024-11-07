@@ -1,0 +1,172 @@
+@import url("./footer-responsive.css");
+/* START ROOT */
+:root {
+  /* FONTS - Default (English) */
+  --primary-font: "Zumme"; /* WEIGHTS: 300, 500, 600 */
+  --secondry-font: "Poppins"; /* WEIGHTS: 400, 500, 600 */
+  --kodeMono-font: "Kode Mono";
+  --font-family: var(--primary-font);
+
+  /* FONT STYLE */
+  --fontStyle-Normal: normal;
+  --fontStyle-Italic: italic;
+
+  /* COLOR PALLETE */
+  --navbar-Background: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(0, 0, 0, 0) 94.02%
+  );
+  --layout-background: linear-gradient(0deg, #000 0%, #000 100%);
+  --bullets-Background: rgba(0, 0, 0, 0.17);
+  --full-White: #ffffff;
+  --full-Black: #000000;
+  --devo-Emperor: #555555;
+  --devo-Gallery: #eeeeee;
+  --text-Seashell: #f1f1f1;
+  --gray-100: #f0f0f0;
+  --aother-Black: #0e0e0e;
+  --another-Gray: #c3c3c3;
+  --border-Color: #373737;
+  --text-Gray-Chateau: #a9aeb2;
+  --secondery-Color: #f6c42d;
+  --devo-Flamingo: #f6c42e;
+  --news-Letter: #ffb73d;
+  /* ROTATE */
+  --rotate-arrow: rotate(0deg);
+}
+
+/* Arabic Font Settings */
+:root[lang="ar"] {
+  --primary-font: "Cairo"; /* Arabic font for primary and secondary */
+  --secondry-font: "Cairo";
+  --font-family: var(--primary-font);
+  --rotate-arrow: rotate(180deg);
+}
+
+/* END ROOT */
+footer {
+  padding: 16rem 0 3.2rem 0;
+}
+footer .footer__holder {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: var(--border-Color);
+  }
+}
+
+.footer__holder .navigation {
+  & h4 {
+    color: var(--text-Seashell);
+    font-family: var(--primary-font);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+  & li {
+    margin: 1.2rem 0;
+    & a {
+      color: var(--text-Gray-Chateau);
+      font-family: var(--secondry-font);
+      text-transform: capitalize;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.8rem;
+      transition: 0.3s;
+      & span {
+        text-transform: uppercase;
+      }
+      &:hover {
+        color: var(--devo-Flamingo);
+      }
+    }
+  }
+}
+
+.footer__holder .news__letter {
+  max-width: 28.5rem;
+
+  & h4 {
+    color: var(--text-Seashell);
+    font-family: var(--primary-font);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  & p {
+    color: var(--text-Gray-Chateau);
+    font-family: var(--secondry-font);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem;
+  }
+
+  & .form__holder {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--full-White);
+    margin: 4rem 0;
+    & svg:nth-child(1) {
+      width: 20px;
+      height: 16px;
+    }
+    & svg:nth-last-child(1) {
+      transform: var(--rotate-arrow);
+      width: 24px;
+      height: 24px;
+    }
+    & input {
+      all: unset;
+      color: var(--text-Seashell);
+      font-family: var(--secondry-font);
+      width: 100%;
+      font-size: 1.8rem;
+      padding: 0 1rem;
+    }
+    & input::placeholder {
+      font-size: 1.5rem;
+      color: var(--text-Seashell);
+    }
+  }
+}
+
+footer .footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .social__media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 2rem;
+    }
+  }
+  & p {
+    color: var(--text-Gray-Chateau);
+    font-family: var(--secondry-font);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+}
